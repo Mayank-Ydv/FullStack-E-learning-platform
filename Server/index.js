@@ -20,7 +20,7 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(
     cors({
-        origin:"https://e-learning-frontend-et24wy978-mayank-yadavs-projects-edded3a9.vercel.app",
+        origin:"*",
         credentials:true
     })
 )
