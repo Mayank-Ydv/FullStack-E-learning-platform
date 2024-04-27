@@ -10,7 +10,7 @@ import TimeLineSection from "../components/Homepage/TimeLineSection";
 import LearningLanguageSection from "../components/Homepage/LearningLanguageSection" ;
 import InstructorSection from "../components/Homepage/InstructorSection";
 import Exploremore from "../components/Homepage/Exploremore";
-
+import ReviewSlider from "../components/common/ReviewSlider";
 
 
 
@@ -141,7 +141,7 @@ const Home = () => {
           <div className="flex flex-row gap-10 mt-[95px]  mb-10  ">
             <div className="text-4xl font-semibold w-[45%]">
               Get the skills you need for a{" "}
-              <HighlightText text={"that is in demand."} />
+              <HighlightText text={"job that is in demand."} />
             </div>
             <div className=" w-[40%] items-start flex flex-col gap-7">
               The modern StudyNotion is the dictates its own terms. Today, to be
@@ -160,6 +160,7 @@ const Home = () => {
       <div className="w-11/12 mx-auto  max-w-maxContent flex flex-col items-center justify-center bg-richblack-900 text-white gap-8 ">
       <InstructorSection/>
       <h2 className="text-4xl  font-semibold ">Reviews from other learners</h2>
+      <ReviewSlider/>
 
 
       </div>
