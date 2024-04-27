@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+
+html,body{
+    overflow-x: hidden;
+}
+
+.homepage_bg{
+    background: url("../src/assets/Images/bghome.svg");
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px) rotate(0deg); }
+    50% { transform: translateX(5px) rotate(0deg); }
+    75% { transform: translateX(-5px) rotate(0deg); }
+    100% { transform: translateX(5px) rotate(0deg); }
+  }
+
+  .shake-image {
+    animation: shake 0.5s ease-in-out infinite;
+}
