@@ -67,7 +67,7 @@ function LoginForm() {
           }}
           className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] pr-12 text-richblack-5"
         />
-        <s pan
+        <span
           onClick={() => setShowPassword((prev) => !prev)}
           className="absolute right-3 top-[38px] z-[10] cursor-pointer"
         >
@@ -76,7 +76,7 @@ function LoginForm() {
           ) : (
             <AiOutlineEye fontSize={24} fill="#AFB2BF" />
           )}
-        </s>
+        </span>
         <Link to="/forgot-password">
           <p className="mt-1 ml-auto max-w-max text-xs text-blue-100">
             Forgot Password
