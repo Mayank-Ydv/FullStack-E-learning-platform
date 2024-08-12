@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import ReactStars from "react-rating-stars-component"
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react"
-// import { Autoplay,FreeMode,Navigation, Pagination}  from 'swiper/modules'
+import { Autoplay,FreeMode,Navigation, Pagination}  from 'swiper/modules'
 // Import Swiper styles
 import "swiper/css"
 import "swiper/css/free-mode"
@@ -11,7 +11,7 @@ import "../../App.css"
 // Icons
 import { FaStar } from "react-icons/fa"
 // Import required modules
-import { Autoplay, FreeMode, Pagination } from "swiper/modules"
+
 
 // Get apiFunction and the endpoint
 import { apiConnector } from "../../Services/apiconnector"
@@ -19,6 +19,7 @@ import { ratingsEndpoints } from "../../Services/apis"
 
 function ReviewSlider() {
   const [reviews, setReviews] = useState([])
+  console.log("thsi",reviews)
   const truncateWords = 15
 
   useEffect(() => {
@@ -36,8 +37,8 @@ function ReviewSlider() {
   // console.log(reviews)
 
   return (
-    <div className="text-white">
-      <div className="my-[50px] h-[184px] max-w-maxContentTab lg:max-w-maxContent">
+    <div className="text-white   w-full">
+      <div className="my-[50px]  max-w-maxContentTab lg:max-w-maxContent">
         <Swiper
           slidesPerView={4}
           spaceBetween={25}
@@ -53,8 +54,8 @@ function ReviewSlider() {
           {reviews?.map((review, i) => {
             return (
               <SwiperSlide key={i}>
-                <div className="flex flex-col gap-3 bg-richblack-800 p-3 text-[14px] text-richblack-25">
-                  <div className="flex items-center gap-4">
+                <div className="flex flex-col gap-3 bg-richblack-800 p-3 text-[14px] text-richblack-25 max-w-full">
+                  <div className="flex items-center gap-4 max-w-full">
                     <img
                       src={
                         review?.user?.image

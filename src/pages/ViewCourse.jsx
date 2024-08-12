@@ -31,7 +31,7 @@ const ViewCourse = () => {
 
   return (
     <>
-        <div>
+        <div className='flex items-center'>
             <VideoDetailsSidebar setReviewModal={setReviewModal} />
             <div>
                 <Outlet />
