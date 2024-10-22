@@ -166,69 +166,6 @@ exports.sendPaymentSuccessEmail = async(req, res) => {
         return res.status(500).json({success:false, message:"Could not send email"})
     }
 }
-// exports.verifySignature = async (req,res)=>{
-//     const webhookSecret = "12345678"
-//     const signature = req.header["x-razorpay-signature"]
 
-//     const shasum = crypto.createHmac("sha256" , webhookSecret)
-//     shasum.update(JSON.stringify(req.body));
-//     const digest = shasum.digest("hex")
-//     if(signature === digest){
-//         console.log("Payment is authorized")
-
-//         const {courseId , userId} = req.body.payload.payment.entity.notes;
-//         try{
-//             const enrolledCourse = await Course.findByIdAndUpdate(
-//                 {_id:courseId},
-//                 {
-//                     $push:{
-//                         studentsEnrolled:userId
-//                     }
-//                 },
-//                 {new:true}
-//             )
-//             if(!enrolledCourse){
-//                 return res.json({
-//                     success:false,
-//                     message:"Course not found"
-//                 })
-//             }
-//             console.log(enrolledCourse)
-
-//             // find the user and enroll the course to the student profile
-//             const enrollStudent = await User.findByIdAndUpdate(
-//                 {_id:userId},
-//                 {
-//                     $push:{
-//                         courses:courseId
-//                     }
-//                 },
-//                 {new:true}
-//             )
-
-//             // send confirmation mail of the course enrollment
-//             const emailResponse = await maileseder(
-//                 enrollStudent.email,
-//                 "Congratulations ",
-//                 "Your are enrolled in the course"
-
-//             );
-
-//         }catch(error){
-//             console.log(error)
-//             return res.status(500).json({
-//                 success:false,
-//                 message:error.message
-//             })
-
-//         }
-//     }
-//     else{
-//         return res.status(400).json({
-//             success:false,
-//             message:"Invalid requrest"
-//         })
-//     }
-// }
 
 
