@@ -27,8 +27,8 @@ Visit the live demo.
 Alternatively, clone the repository, follow the setup instructions in the README, and run the application locally.
 # Sample User Credentials
 Use the following credentials to test different roles(Student):
-*email:ymayank832@gmail.com
-*password:1234
+* email:ymayank832@gmail.com
+* password:1234
 
 ## Admin Account
 
